@@ -1,0 +1,9 @@
+/* design for random-img component */
+.random-img {
+    height: 30vh;
+}
+
+.random-button {
+    display: block;
+    margin: 5px;
+}
