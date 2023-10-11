@@ -27,7 +27,7 @@ export default function RandomPicture() {
 
     return (
         <div>
-            <p>Random Dog Image</p>
+            <h2>Random Dog Image</h2>
             <img className="random-img" src={imageUrl} alt="Random Dog" />
             <button className="random-button" onClick={fetchRandomDogImage}>New Image</button> {/* ボタンをクリックしたときに画像を変更 */}
         </div>
