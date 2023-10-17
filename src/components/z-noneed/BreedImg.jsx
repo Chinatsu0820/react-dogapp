@@ -1,17 +1,13 @@
-import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import './BreedImg.css';
 
-
-// 画像を表示するコンポーネント（DogImage.js）
-// 犬種名に基づいてAPIから画像URLを取得し、画像を表示する
-export default function BreedImg({ dogBreed }) {
+export default function BreedImg() {
+    const { dogBreed } = useParams();
     const [imageUrl, setImageUrl] = useState('');
 
     useEffect(() => {
-        // breedに基づいてAPIリクエストを送信し、画像URLを取得
-        if (dogBreed) { // dogBreedが空でない場合にのみAPIリクエストを行う
+        if (dogBreed) {
             const apiUrl = `https://dog.ceo/api/breed/${dogBreed}/images/random`;
             fetch(apiUrl)
                 .then((response) => response.json())
