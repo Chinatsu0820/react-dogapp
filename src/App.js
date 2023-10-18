@@ -2,20 +2,21 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PageContent from './components/organisms/PageContent';
 import DogBreedPage from './components/organisms/DogBreedPage';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/sections/Header';
+import Footer from './components/sections/Footer';
+import "./App.css"
 
 function App() {
   return (
     <BrowserRouter>
-      <div>
+      <section className='whole'>
         <Header />
         <Routes>
           <Route path="/" element={<PageContent />} />
           <Route path="/breed/:lowerCaseBreedName" element={<DogBreedPage />} />
         </Routes>
         <Footer />
-      </div>
+      </section>
     </BrowserRouter>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import "./DogBreedPage.css";
 
 function DogBreedPage() {
   const { lowerCaseBreedName } = useParams();
@@ -28,11 +29,11 @@ function DogBreedPage() {
   }, [lowerCaseBreedName]);
 
   return (
-    <div>
-      <h1>The image of {lowerCaseBreedName}</h1>
-      {dogBreedImage && <img src={dogBreedImage} alt={lowerCaseBreedName} />}
+    <section className='breed-box'>
+      <h2>The image of {lowerCaseBreedName}</h2>
+      {dogBreedImage && <img className="breed-img" src={dogBreedImage} alt={lowerCaseBreedName} />}
       <Link to="/">HOME</Link>
-    </div>
+    </section>
   );
 }
 

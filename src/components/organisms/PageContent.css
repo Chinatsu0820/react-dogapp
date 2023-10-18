@@ -1,0 +1,21 @@
+/* for a random img and a search box */
+
+.random-box {
+    background-color: rgba(255, 192, 203, 0.484);
+    margin: 20px;
+    padding:20px;
+}
+
+@media screen and (min-width: 481px) {
+    .random-box {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .random-box {
+       /* 960px以上に適用されるCSS（PC用） */
+       max-width: 70vw;
+    }
+}
