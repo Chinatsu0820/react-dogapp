@@ -1,0 +1,43 @@
+/* for Dog Breed Img Page*/
+.breed-box {
+    background-color: rgba(255, 192, 203, 0.484);
+    margin: 20px;
+    padding: 20px;
+}
+
+@media screen and (min-width: 481px) {
+    .breed-box {
+        /* 481px以上に適用されるCSS（タブレット用） */
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .breed-box {
+        /* 960px以上に適用されるCSS（PC用） */
+        max-width: 70vw;
+    }
+}
+
+
+
+.breed-img {
+    height: 20vh;
+    max-width: 70vw;
+}
+
+@media screen and (min-width: 481px) {
+    .breed-img {
+        /* 481px以上に適用されるCSS（タブレット用） */
+        height: 30vh;
+        max-width: 60vw;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .breed-img {
+        /* 960px以上に適用されるCSS（PC用） */
+        max-width: none;
+    }
+}

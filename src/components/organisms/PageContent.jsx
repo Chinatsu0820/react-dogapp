@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import RandomImage from '../molecules/RandomImage.jsx';
 import SearchBox from '../molecules/SearchBox.jsx';
 import { useNavigate } from 'react-router-dom';
+import "./PageContent.css"
 
 function PageContent() {
     const [breedName, setDogBreed] = useState('');
@@ -36,7 +37,7 @@ const fetchRandomDogImage = async () => {
 
     return (
         <section>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <div className="random-box">
                 <RandomImage
                     image={dogImage}
                     onNewImageRequest={fetchRandomDogImage}

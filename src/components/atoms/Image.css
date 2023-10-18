@@ -1,0 +1,21 @@
+/* for only random-img */
+
+.random-img {
+    height: 20vh;
+    max-width: 70vw;
+}
+
+@media screen and (min-width: 481px) {
+    .random-img {
+        /* 481px以上に適用されるCSS（タブレット用） */
+        height: 30vh;
+        max-width: 60vw;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .random-img {
+        /* 960px以上に適用されるCSS（PC用） */
+        max-width: none;
+    }
+}
