@@ -3,12 +3,17 @@
     background-color: rgba(255, 192, 203, 0.484);
     margin: 20px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
+
 
 @media screen and (min-width: 481px) {
     .breed-box {
         /* 481px以上に適用されるCSS（タブレット用） */
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
     }
 }
@@ -40,4 +45,31 @@
         /* 960px以上に適用されるCSS（PC用） */
         max-width: none;
     }
+}
+
+
+
+.breed-box-left {
+    text-align: center;
+}
+
+.breed-box-left h2 {
+    text-shadow: 0.5px 0.5px 1px rgba(168, 49, 49, 0.518);
+    /* h-shadow v-shadow blur-radius color */
+}
+
+.share-text {
+    background-color: rgba(162, 8, 8, 0.422);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.link-home {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(53, 53, 53);
+}
+
+.link-home:hover {
+    background-color: rgba(0, 0, 255, 0.379);
 }

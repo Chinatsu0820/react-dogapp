@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import "./DogBreedPage.css";
+import './DogBreedPage.css';
+import '../molecules/SnsIcons';
+import SnsIcons from '../molecules/SnsIcons';
 
 function DogBreedPage() {
   const { lowerCaseBreedName } = useParams();
@@ -30,9 +32,13 @@ function DogBreedPage() {
 
   return (
     <section className='breed-box'>
+      <section className='breed-box-left'>
       <h2>The image of {lowerCaseBreedName}</h2>
+      <p className='share-text'>Do you want to share?</p>
+      <SnsIcons />
+      </section>
       {dogBreedImage && <img className="breed-img" src={dogBreedImage} alt={lowerCaseBreedName} />}
-      <Link to="/">HOME</Link>
+      <div><Link className='link-home' to="/">HOME</Link></div>
     </section>
   );
 }

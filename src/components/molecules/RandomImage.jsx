@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from '../atoms/Image';
-import Button from '../atoms/Button';
+import CustomButton from '../atoms/CustomButton';
+import './RandomImage.css'
 
 function RandomImage({ image, onNewImageRequest }) {
   const [dogImage, setDogImage] = useState('');
@@ -22,9 +23,9 @@ function RandomImage({ image, onNewImageRequest }) {
   };
 
   return (
-    <div>
+    <div className='random-box'>
       <Image src={dogImage} alt="Random Dog" />
-      <Button label="Get Random Dog" onClick={handleButtonClick} />
+      <CustomButton label="Get Random Dog" onClick={handleButtonClick} />
     </div>
   );
 }
