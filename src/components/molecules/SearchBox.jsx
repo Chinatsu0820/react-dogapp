@@ -1,27 +1,25 @@
 import React, { useState } from 'react';
 import InputField from '../atoms/InputField';
-import Button from '../atoms/Button';
+import CustomButton from '../atoms/CustomButton';
+import "./SearchBox.css"
 
 function SearchBox({ onInputChange, onGetDataClick }) {
     const [searchTerm, setSearchTerm] = useState('');
 
-    // Style to position the button on the right of the input field
-    const horizontalStyle = {
-        display: 'flex',
-        alignItems: 'center'
-    };
-
     return (
-        <div style={horizontalStyle}>
+        <div className='search-box'>
+            <p>Let's get your favorite-breed pic!</p>
+            <div className='search-box-inside'>
             <InputField
                 value={searchTerm}
                 onChange={(e) => {
                     setSearchTerm(e.target.value);
                     onInputChange(e); // 親コンポーネントにテキストの変更を通知
                 }}
-                placeholder="Search..."
+                placeholder="e.g. shiba"
             />
-            <Button label="Get Data" onClick={onGetDataClick} />
+            <CustomButton label="Get Data" onClick={onGetDataClick} secondary={true}/>
+            </div>
         </div>
     );
 }

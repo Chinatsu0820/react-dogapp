@@ -1,4 +1,11 @@
 /* for App (top) page */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+  --main-font: 'Inter', sans-serif;
+}
+
 
 .whole {
   display: flex;
@@ -8,4 +15,5 @@
   background-image: url(imgs/back-dog.jpg);
   background-size: cover;
   min-height: 100vh;
+  font-family: var(--main-font);
 }

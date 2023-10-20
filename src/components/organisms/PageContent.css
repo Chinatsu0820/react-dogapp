@@ -1,20 +1,27 @@
-/* for a random img and a search box */
+/* for top page */
 
-.random-box {
+.top-box {
     background-color: rgba(255, 192, 203, 0.484);
     margin: 20px;
     padding:20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
+/* for tablet */
 @media screen and (min-width: 481px) {
-    .random-box {
-        display: flex;
+    .top-box {
+        flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+        gap: 20px;
     }
 }
 
+/* for desktop */
 @media screen and (min-width: 960px) {
-    .random-box {
+    .top-box {
        /* 960px以上に適用されるCSS（PC用） */
        max-width: 70vw;
     }

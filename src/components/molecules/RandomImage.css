@@ -1,0 +1,7 @@
+/* for Random image and button */
+
+.random-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

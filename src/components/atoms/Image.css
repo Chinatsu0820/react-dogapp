@@ -9,7 +9,7 @@
     .random-img {
         /* 481px以上に適用されるCSS（タブレット用） */
         height: 30vh;
-        max-width: 60vw;
+        max-width: 40vw;
     }
 }
 

@@ -1,0 +1,11 @@
+input {
+    background: none;
+    padding: 5px;
+    border: 1px solid rgb(114, 74, 74);
+    border-radius: 3px;
+}
+
+/* プレースホルダーの文字色を変更 */
+input::placeholder {
+    color: rgba(53, 33, 33, 0.497);
+  }

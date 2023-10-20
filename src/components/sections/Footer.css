@@ -1,7 +1,22 @@
 /* for footer*/
 
 footer {
-    background-color: rgba(164, 209, 225, 0.5);
-    height: 20vh;
+    background: linear-gradient(rgba(164, 209, 225, 0), rgba(164, 209, 225, 0.7));
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+/* for desktop */
+@media screen and (min-width: 960px) {
+   footer {
+    flex-direction: row;
+    justify-content: space-between;
+   }
+
+   .wrap-snsicon, p {
+    margin: 20px;
+   }
 }

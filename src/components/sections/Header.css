@@ -1,7 +1,54 @@
 /* for header*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap'); /* for app title in header*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap'); /* for app subtitle in header */
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Hentaigana+Akari&display=swap'); /* for logo text in nav*/
 
 header {
-    background-color: rgba(164, 209, 225, 0.5);
-    height: 30vh;
+    background: linear-gradient(rgba(164, 209, 225, 0.7), rgba(164, 209, 225, 0));
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 子要素を垂直方向に中央に配置 */
+}
+
+nav {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.312);
+    margin-top: 15px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.nav-title {
+    display: flex;
+    align-items: center;
+    font-family: 'Yuji Hentaigana Akari', cursive;
+    font-weight: bold;
+}
+
+.nav-img {
+    width: 2vw;
+    min-width: 20px;
+    margin-right: 5px;
+}
+
+header>h1 {
+    font-size: 10vw;
+    font-family: 'Dancing Script', cursive;
+}
+
+header>p {
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+}
+
+
+/* for desktop */
+@media screen and (min-width: 960px) {
+    header>h1 {
+       font-size: 100px;
+    }
 }

@@ -1,0 +1,17 @@
+/* for search box */
+
+.search-box {
+    background-color: rgba(206, 17, 108, 0.308);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.search-box-inside {
+    display: flex;
+    align-items: center;
+    gap: 2px
+}
+
+.InputField {
+  font-family: var(--main-font);
+}

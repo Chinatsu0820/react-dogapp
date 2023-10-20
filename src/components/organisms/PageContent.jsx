@@ -37,7 +37,7 @@ const fetchRandomDogImage = async () => {
 
     return (
         <section>
-            <div className="random-box">
+            <div className="top-box">
                 <RandomImage
                     image={dogImage}
                     onNewImageRequest={fetchRandomDogImage}
