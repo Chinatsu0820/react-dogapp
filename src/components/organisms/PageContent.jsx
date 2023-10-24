@@ -2,36 +2,46 @@ import React, { useState } from 'react';
 import RandomImage from '../molecules/RandomImage.jsx';
 import SearchBox from '../molecules/SearchBox.jsx';
 import { useNavigate } from 'react-router-dom';
-import "./PageContent.css"
+import {showNotification} from '../js-component/notification.js';
+import './PageContent.css'
 
 function PageContent() {
     const [breedName, setDogBreed] = useState('');
     const [dogImage, setDogImage] = useState('');
     const navigate = useNavigate();
 
-const fetchRandomDogImage = async () => {
-    const lowerCaseBreedName = breedName.toLowerCase(); // 入力された犬種名を小文字に変換
-    const url = lowerCaseBreedName
-            ? `https://dog.ceo/api/breed/${lowerCaseBreedName}/images/random`
-            : 'https://dog.ceo/api/breeds/image/random';
-
+    // ランダム画像用　for get a random img
+    const fetchRandomDogImage = async () => {
         try {
-            const response = await fetch(url);
+            const response = await fetch('https://dog.ceo/api/breeds/image/random');
             const data = await response.json();
 
             if (data.status === 'success') {
                 setDogImage(data.message);
-
-                // 特定の条件を満たす場合にのみページ遷移
-                if (lowerCaseBreedName !== '') {
-                    navigate(`/breed/${lowerCaseBreedName}`);
-                }
             }
-            
-            console.log("got random img") // to check how many times it gets random img
-
         } catch (error) {
-            console.error("Error fetching dog image:", error);
+            console.error("Error fetching random dog image:", error);
+        }
+    };
+
+    // 犬種画像用 for get a breed img
+    const fetchDogImageByBreed = async (breedName) => {
+        const lowerCaseBreedName = breedName.toLowerCase();
+        if (lowerCaseBreedName) {
+            try {
+                const response = await fetch(`https://dog.ceo/api/breed/${lowerCaseBreedName}/images/random`);
+                const data = await response.json();
+
+                if (data.status === 'success') {
+                    setDogImage(data.message);
+                    navigate(`/breed/${lowerCaseBreedName}`);
+                } else {
+                    showNotification('No images found for the specified breed.');
+                }
+            } catch (error) {
+                console.error("Error fetching dog image:", error);
+                showNotification('An error occurred while fetching the dog image.');
+            }
         }
     };
 
@@ -43,7 +53,7 @@ const fetchRandomDogImage = async () => {
                     onNewImageRequest={fetchRandomDogImage}
                 />
                 <SearchBox
-                    onGetDataClick={() => fetchRandomDogImage(breedName)}
+                    onGetDataClick={() => fetchDogImageByBreed(breedName)}
                     onInputChange={(e) => setDogBreed(e.target.value)}
                 />
             </div>
@@ -52,3 +62,4 @@ const fetchRandomDogImage = async () => {
 }
 
 export default PageContent;
+
