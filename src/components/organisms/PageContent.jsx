@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import {showNotification} from '../js-component/notification.js';
 import './PageContent.css'
 
-function PageContent() {
+function PageContent({ setHovered }) {
     const [breedName, setDogBreed] = useState('');
     const [dogImage, setDogImage] = useState('');
     const navigate = useNavigate();
@@ -51,10 +51,12 @@ function PageContent() {
                 <RandomImage
                     image={dogImage}
                     onNewImageRequest={fetchRandomDogImage}
+                    setHovered={setHovered} // passing context to RandomImage
                 />
                 <SearchBox
                     onGetDataClick={() => fetchDogImageByBreed(breedName)}
                     onInputChange={(e) => setDogBreed(e.target.value)}
+                    setHovered={setHovered} // passing context to SearchBox
                 />
             </div>
         </section>

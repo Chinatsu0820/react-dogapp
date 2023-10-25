@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import CursorContext from '../CursorContext';
 import styled from 'styled-components';
 
 // CSS-in-JS (Styled-components)
@@ -24,11 +25,22 @@ const SecondaryButton = styled(Button)`
 `;
 
 
-function CustomButton({ label, onClick, secondary }) {
+function CustomButton({ label, onClick, secondary, setHovered }) {
+  const isHovered = useContext(CursorContext); // using the received context
+  // const contextValue = useContext();
   const StyledButton = secondary ? SecondaryButton : Button;
 
   return (
-    <StyledButton onClick={onClick}>{label}</StyledButton>
+    <StyledButton 
+      onClick={onClick}
+      style={{
+        cursor: isHovered ? 'pointer' : 'default',
+      }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      >
+        {label}
+    </StyledButton>
   );
 }
 
