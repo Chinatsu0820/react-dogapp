@@ -3,7 +3,7 @@ import InputField from '../atoms/InputField';
 import CustomButton from '../atoms/CustomButton';
 import "./SearchBox.css"
 
-function SearchBox({ onInputChange, onGetDataClick }) {
+function SearchBox({ onInputChange, onGetDataClick, setHovered }) {
     const [searchTerm, setSearchTerm] = useState('');
 
     return (
@@ -18,7 +18,12 @@ function SearchBox({ onInputChange, onGetDataClick }) {
                 }}
                 placeholder="e.g. shiba"
             />
-            <CustomButton label="Get Data" onClick={onGetDataClick} secondary={true}/>
+            <CustomButton 
+                label="Get Data" 
+                onClick={onGetDataClick} 
+                secondary={true}
+                setHovered={setHovered} // passing context to CustomButton
+                />
             </div>
         </div>
     );

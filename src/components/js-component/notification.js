@@ -8,6 +8,6 @@ export function showNotification(message) {
     
     setTimeout(() => {
       notification.remove();
-    }, 3000); // 3秒後に通知を削除
+    }, 3000); // 3秒後に通知を削除 delete the notification 3 seconds later
     
   }
