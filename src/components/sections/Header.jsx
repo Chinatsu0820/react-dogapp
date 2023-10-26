@@ -1,14 +1,14 @@
-import React from "react";
-import "./Header.css";
-import navImg from "../../imgs/site-logo.png";
+import React from 'react';
+import './Header.css';
+import navImg from '../../imgs/site-logo.png';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
     return (
         <header>
            <nav>
-            <section className="nav-title">
-                <img className="nav-img" src={navImg} />
+            <section className='nav-title'>
+                <img className='nav-img' src={navImg} alt='This is an icon of this website'/>
                 <p>PupView</p>
             </section>
             <div><Link className='link-home' to="/">HOME</Link></div>

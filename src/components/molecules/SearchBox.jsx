@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import InputField from '../atoms/InputField';
 import CustomButton from '../atoms/CustomButton';
-import "./SearchBox.css"
+import './SearchBox.css'
 
-function SearchBox({ onInputChange, onGetDataClick, setHovered }) {
+export default function SearchBox({ onInputChange, onGetDataClick, setHovered }) {
     const [searchTerm, setSearchTerm] = useState('');
 
     return (
@@ -28,5 +29,3 @@ function SearchBox({ onInputChange, onGetDataClick, setHovered }) {
         </div>
     );
 }
-
-export default SearchBox;

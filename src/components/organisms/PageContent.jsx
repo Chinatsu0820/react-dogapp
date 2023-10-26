@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import RandomImage from '../molecules/RandomImage.jsx';
 import SearchBox from '../molecules/SearchBox.jsx';
 import { useNavigate } from 'react-router-dom';
@@ -47,7 +48,7 @@ function PageContent({ setHovered }) {
 
     return (
         <section>
-            <div className="top-box">
+            <div className='top-box'>
                 <RandomImage
                     image={dogImage}
                     onNewImageRequest={fetchRandomDogImage}

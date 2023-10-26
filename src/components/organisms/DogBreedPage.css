@@ -1,26 +1,26 @@
-/* for Dog Breed Img Page*/
-.breed-box {
+/* ----for Dog Breed Img Page---- */
+.breed-box { /* boxmodel */
     background-color: rgba(255, 192, 203, 0.484);
     margin: 20px;
     padding: 20px;
+    border: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
 }
 
-
+/* --TABLET-- */
 @media screen and (min-width: 481px) {
     .breed-box {
-        /* 481px以上に適用されるCSS（タブレット用） */
         flex-direction: row;
         justify-content: space-between;
     }
 }
 
+/* --DESKTOP-- */
 @media screen and (min-width: 960px) {
     .breed-box {
-        /* 960px以上に適用されるCSS（PC用） */
         max-width: 70vw;
     }
 }
@@ -32,17 +32,17 @@
     max-width: 70vw;
 }
 
+/* --TABLET-- */
 @media screen and (min-width: 481px) {
     .breed-img {
-        /* 481px以上に適用されるCSS（タブレット用） */
         height: 30vh;
         max-width: 60vw;
     }
 }
 
+/* --DESKTOP-- */
 @media screen and (min-width: 960px) {
     .breed-img {
-        /* 960px以上に適用されるCSS（PC用） */
         max-width: none;
     }
 }
@@ -54,8 +54,7 @@
 }
 
 .breed-box-left h2 {
-    text-shadow: 0.5px 0.5px 1px rgba(168, 49, 49, 0.518);
-    /* h-shadow v-shadow blur-radius color */
+    text-shadow: 0.5px 0.5px 1px rgba(168, 49, 49, 0.518); /* h-shadow v-shadow blur-radius color */
 }
 
 .share-text {
