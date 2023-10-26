@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types'; // for debagging
 import './InputField.css';
 
-function InputField({
+export default function InputField({
     value,
     onChange,
     placeholder = '',
@@ -23,6 +23,8 @@ function InputField({
     );
 }
 
+
+// for debagging
 InputField.propTypes = {
     value: PropTypes.string.isRequired,
     onChange: PropTypes.func.isRequired,
@@ -31,5 +33,3 @@ InputField.propTypes = {
     readOnly: PropTypes.bool,
     maxLength: PropTypes.number
 };
-
-export default InputField;

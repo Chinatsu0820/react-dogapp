@@ -1,4 +1,4 @@
-/* for header*/
+/* ----for header---- */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap'); /* for app title in header*/
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap'); /* for app subtitle in header */
 @import url('https://fonts.googleapis.com/css2?family=Yuji+Hentaigana+Akari&display=swap'); /* for logo text in nav*/
@@ -46,7 +46,7 @@ header>p {
 }
 
 
-/* for desktop */
+/* --DESKTOP-- */
 @media screen and (min-width: 960px) {
     header>h1 {
        font-size: 100px;

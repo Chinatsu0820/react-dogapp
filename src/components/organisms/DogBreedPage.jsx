@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom'; // for Routing
 import { Link } from 'react-router-dom';
 import './DogBreedPage.css';
 import '../molecules/SnsIcons';
 import SnsIcons from '../molecules/SnsIcons';
 
 function DogBreedPage() {
-  const { lowerCaseBreedName } = useParams();
+  const { lowerCaseBreedName } = useParams(); // it is a parameter
   const [dogBreedImage, setDogBreedImage] = useState('');
 
   useEffect(() => {
@@ -37,7 +38,7 @@ function DogBreedPage() {
       <p className='share-text'>Do you want to share?</p>
       <SnsIcons />
       </section>
-      {dogBreedImage && <img className="breed-img" src={dogBreedImage} alt={lowerCaseBreedName} />}
+      {dogBreedImage && <img className='breed-img' src={dogBreedImage} alt={lowerCaseBreedName} />}
       <div><Link className='link-home' to="/">HOME</Link></div>
     </section>
   );

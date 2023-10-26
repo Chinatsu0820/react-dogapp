@@ -5,7 +5,6 @@ input {
     border-radius: 3px;
 }
 
-/* プレースホルダーの文字色を変更 */
-input::placeholder {
+input::placeholder { /* change color of the placeholder */
     color: rgba(53, 33, 33, 0.497);
   }

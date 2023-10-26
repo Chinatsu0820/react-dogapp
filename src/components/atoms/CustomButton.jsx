@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+import React from 'react';
+import { useContext } from 'react';
 import CursorContext from '../CursorContext';
 import styled from 'styled-components';
 
@@ -24,10 +25,8 @@ const SecondaryButton = styled(Button)`
   background-image: linear-gradient(144deg, #af40ff, #5b42f2 50%, #00ddeb);
 `;
 
-
-function CustomButton({ label, onClick, secondary, setHovered }) {
+export default function CustomButton({ label, onClick, secondary, setHovered }) {
   const isHovered = useContext(CursorContext); // using the received context
-  // const contextValue = useContext();
   const StyledButton = secondary ? SecondaryButton : Button;
 
   return (
@@ -43,5 +42,3 @@ function CustomButton({ label, onClick, secondary, setHovered }) {
     </StyledButton>
   );
 }
-
-export default CustomButton;
